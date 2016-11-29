@@ -10,6 +10,11 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    @credit+= amount
+  end
+
+  def withdraw(amount)
+    @balance -= amount
     @debit += amount
   end
 

@@ -19,9 +19,24 @@ describe Account do
     expect(account.balance).to eq(1000)
   end
 
-  it 'can deposit money into the account so that you can view the amount that has been debited' do
+  it 'can deposit money into the account so that it can be viewed in my credit' do
     account = Account.new
     account.deposit(1000)
-    expect(account.debit).to eq(1000)
+    expect(account.credit).to eq(1000)
   end
+
+  it 'can withdraw money from the account' do
+    account = Account.new
+    account.deposit(1000)
+    account.withdraw(500)
+    expect(account.balance).to eq(500)
+  end
+
+  it 'can withdraw money from the account so that it can be viewed in my debit ' do
+    account = Account.new
+    account.deposit(1000)
+    account.withdraw(500)
+    expect(account.debit).to eq(500)
+  end
+
 end
