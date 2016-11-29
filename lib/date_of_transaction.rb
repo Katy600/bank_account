@@ -8,7 +8,7 @@ class Date_of_transaction
   end
 
   def todays_statment(todays_date)
-    @transaction = todays_date
+    @transaction = {date: todays_date}
   end
 
 end

@@ -18,4 +18,6 @@ class Account
     @debit += amount
   end
 
+  
+
 end
